@@ -1,0 +1,19 @@
+const [Arr,setState]= useState(["item 1"])
+
+function addItem(){
+
+    setState(prevArr=> [...prevArr,`item${prevArr.length+1}`]
+        
+        )
+
+}
+
+
+        
+      
+return <div>
+    {Arr}  
+    
+    <button style={"backgroundColor:Green"} onClick={addItem}>ADD+</button>
+
+    </div>
