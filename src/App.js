@@ -2,6 +2,7 @@ import React from "react";
 import "./App.css";
 import editItem from "./edit.js";
 import deleteItem from "./delete.js";
+import "./edititem.css"
 
 export default function App(){
   
@@ -49,20 +50,37 @@ function addItem(item){
 
     
      const dolist=Todolist.map(item=> 
-    <div id={`ITEM${Todolist.indexOf(item)}`}>
-            <p class="item-info">{item}</p> 
-          <button onClick={editItem}>edit</button>
-          <button onClick={deleteItem}>delete item</button> 
+    <div class="itm-con" id={`ITEM${Todolist.indexOf(item)}`}>
+            <p class="item--info">{item}</p> 
+
+        
+          <button onClick={editItem}>edit</button> <button onClick={deleteItem}>delete item</button>
+        
+          
     </div>
    
-    )
+    ) 
   
   return(<>
 
-       
+    
+    
 
     <div className="form-container">
-        <form onSubmit={handleSubmit}>
+
+      <span id="App-title">
+      <strong>React Todolist app</strong>
+      </span>
+        <form id="item--form" onSubmit={handleSubmit}>
+
+          <br/>
+          <br/>
+          <br/>
+          <br/>
+          <br/>
+          <br/>
+          <h2 id="form-header">Enter your tasks here!</h2>
+
             <input
                 name="todoitem"
                 type="text"
@@ -70,13 +88,18 @@ function addItem(item){
                 placeholder="Enter new task here"
                 value={formdata.todoitem}
                 className="form--input"
-            
+               
             />
               
             <button class="form--submit" type="submit" >Add new task </button> 
         </form>
+
+
+
+        
       </div>
         
+      <h1>Current To-do-list</h1>
        <div>{dolist}</div>
 
     </>)
