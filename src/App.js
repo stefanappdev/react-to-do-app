@@ -1,5 +1,7 @@
 import React from "react";
-import "./App.css"
+import "./App.css";
+import editItem from "./edit.js";
+import deleteItem from "./delete.js";
 
 export default function App(){
   
@@ -46,41 +48,11 @@ function addItem(item){
     }
 
     
-  function edit(event){
-     let id=event.target.parentElement.id;
-     let div=document.getElementById(id);
-     let item=document.querySelector(`#${event.target.parentElement.id}>.item-info`)
-  
-     let editbox=document.createElement("input");
-     div.appendChild(editbox);
-     let okbtn=document.createElement("button");
-     div.appendChild(okbtn);
-     okbtn.textContent="OK";
-     editbox.setAttribute("value",item.textContent)
-     editbox.setAttribute("name","editbox")
-     okbtn.addEventListener("click",()=>{
-                
-      
-                okbtn.remove()
-                item.textContent=editbox.value
-                editbox.remove()
-                alert("An item was updated")    
-            });
-    
-
-
-  }
-  
-  
-  
-
-
-    
      const dolist=Todolist.map(item=> 
     <div id={`ITEM${Todolist.indexOf(item)}`}>
             <p class="item-info">{item}</p> 
-          <button onClick={edit}>edit</button>
-          <button>delete item</button> 
+          <button onClick={editItem}>edit</button>
+          <button onClick={deleteItem}>delete item</button> 
     </div>
    
     )
