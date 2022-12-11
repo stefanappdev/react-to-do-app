@@ -1,0 +1,58 @@
+.form-container{
+
+    height:100vh;
+    background-color: blueviolet;
+}
+
+#App-title{
+    position:absolute;
+    left:500px;    
+}
+
+
+#App-title>strong{
+    font-size:50px;
+}
+
+#item--form{
+    position:absolute;
+    left:500px;
+    top:100px;
+    height:75vh;
+    width:70vh;
+    background-color: white;
+    border:1px solid black;
+    border-radius:5px;
+
+}
+
+#form-header{
+    position: relative;
+    left:100px;
+}
+
+.form--input{
+
+    position:absolute;
+    left:100px;
+    top:240px;
+    border:1px solid black;
+    border-radius:2px;
+    height:30px;
+}
+
+
+
+.form--submit{
+    position:absolute;
+    left:100px;
+    top:280px;
+    border:1px solid black;
+    border-radius:10px;
+    font-weight: bold;
+    color:#ffffff;
+    background-color:#009933;
+    height:35px;
+}
+
+

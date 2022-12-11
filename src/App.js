@@ -1,8 +1,9 @@
 import React from "react";
-import "./App.css";
-import editItem from "./edit.js";
-import deleteItem from "./delete.js";
-import "./edititem.css"
+import "./styles/App.css";
+import "./styles/edititem.css"
+import editItem from "./components/edit.js";
+import deleteItem from "./components/delete.js";
+import Checked from "./components/checked";
 
 export default function App(){
   
@@ -41,12 +42,21 @@ function addItem(item){
 
     function handleSubmit(event){
 
-     event.preventDefault()
+    event.preventDefault()
     console.log("Something was submitted");
     let item=event.target.todoitem.value;
-    addItem(item);
-    formdata.todoitem='';
+
+    if(item===""){
+      alert("Please enter a task")
     }
+
+    else{
+      addItem(item);
+      alert("New task added")
+      formdata.todoitem='';
+    }
+    
+  }
 
     
      const dolist=Todolist.map(item=> 
@@ -54,7 +64,9 @@ function addItem(item){
             <p class="item--info">{item}</p> 
 
         
-          <button onClick={editItem}>edit</button> <button onClick={deleteItem}>delete item</button>
+          <button class="edit-btn" onClick={editItem}>edit</button> 
+          <button class="delete-btn" onClick={deleteItem}>delete</button>
+          <Checked/>
         
           
     </div>
