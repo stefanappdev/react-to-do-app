@@ -1,0 +1,118 @@
+.form-container{
+
+    height:100vh;
+    background-color: blueviolet;
+}
+
+#App-title{
+    position:absolute;
+    left:500px;    
+}
+
+
+#App-title>strong{
+    font-size:50px;
+}
+
+#item--form{
+    position:absolute;
+    left:500px;
+    top:100px;
+    height:75vh;
+    width:70vh;
+    background-color: white;
+    border:1px solid black;
+    border-radius:5px;
+
+}
+
+#form-header{
+    position: relative;
+    left:100px;
+}
+
+.form--input{
+
+    position:relative;
+    left:100px;
+    border:1px solid black;
+    border-radius:2px;
+    height:30px;
+}
+
+
+
+.form--submit{
+    position:relative;
+    left:100px;
+    border:1px solid black;
+    border-radius:10px;
+    font-weight: bold;
+    color:#000000;
+    background-color:#009933;
+    height:35px;
+}
+
+.dropdown {
+    position: absolute;
+    display: inline-block;
+    top:30px;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 12px 16px;
+    z-index: 1;
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+
+
+
+  @media (orientation:portrait) and (max-width:500px){
+
+    #item--form{
+        top:100px;
+        left:10px;
+        height:50%;
+        width: 95%;  
+    }
+
+
+    #App-title{
+      
+        left: 15px;
+           
+    }
+
+
+
+    .form--input{
+        left: 100px;
+        
+    }
+    
+
+    #App-title>strong{
+        font-size: 35px;
+    }
+    
+
+    .dropdown{
+            top: 450px;
+            left:120px;
+    }
+
+
+#form-header{
+   
+    left:60px;
+}
+
+  }

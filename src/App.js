@@ -1,8 +1,9 @@
 import React from "react";
-import "./App.css";
-import editItem from "./edit.js";
-import deleteItem from "./delete.js";
-import "./edititem.css"
+import "./styles/App.css";
+import "./styles/edititem.css"
+import editItem from "./components/edit.js";
+import deleteItem from "./components/delete.js";
+import Checked from "./components/checked";
 
 export default function App(){
   
@@ -41,20 +42,31 @@ function addItem(item){
 
     function handleSubmit(event){
 
-     event.preventDefault()
+    event.preventDefault()
     console.log("Something was submitted");
     let item=event.target.todoitem.value;
-    addItem(item);
-    formdata.todoitem='';
+
+    if(item===""){
+      alert("Please enter a task")
     }
+
+    else{
+      addItem(item);
+      alert("New task added")
+      formdata.todoitem='';
+    }
+    
+  }
 
     
      const dolist=Todolist.map(item=> 
     <div class="itm-con" id={`ITEM${Todolist.indexOf(item)}`}>
-            <p class="item--info">{item}</p> 
+            <div class="item--info">{item}</div> 
 
         
-          <button onClick={editItem}>edit</button> <button onClick={deleteItem}>delete item</button>
+          <button class="edit-btn" onClick={editItem}>edit</button> 
+          <button class="delete-btn" onClick={deleteItem}>delete</button>
+          <Checked/>
         
           
     </div>
@@ -71,6 +83,8 @@ function addItem(item){
       <span id="App-title">
       <strong>React Todolist app</strong>
       </span>
+
+
         <form id="item--form" onSubmit={handleSubmit}>
 
           <br/>
@@ -90,18 +104,24 @@ function addItem(item){
                 className="form--input"
                
             />
-              
+              <br/>
+              <br/>
             <button class="form--submit" type="submit" >Add new task </button> 
         </form>
-
-
-
         
       </div>
         
-      <h1>Current To-do-list</h1>
-       <div>{dolist}</div>
+      
 
+
+      <div class="dropdown">
+        <span>view current list</span>
+          <div class="dropdown-content">
+          <div>{dolist}</div>   
+          </div>
+    </div>
+     
+        
     </>)
 
   }
