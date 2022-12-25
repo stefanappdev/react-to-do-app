@@ -6,7 +6,7 @@
 
 #App-title{
     position:absolute;
-    left:500px;    
+    left:38%;    
 }
 
 
@@ -73,46 +73,13 @@
     display: block;
   }
 
-
-
-  @media (orientation:portrait) and (max-width:500px){
-
-    #item--form{
-        top:100px;
-        left:10px;
-        height:50%;
-        width: 95%;  
-    }
-
-
-    #App-title{
-      
-        left: 15px;
-           
-    }
-
-
-
-    .form--input{
-        left: 100px;
-        
-    }
-    
-
-    #App-title>strong{
-        font-size: 35px;
-    }
-    
-
-    .dropdown{
-            top: 450px;
-            left:120px;
-    }
-
-
-#form-header{
-   
-    left:60px;
+  .dropdown{
+    float:left;
+    left: 50px;
+    top: 5px;
 }
 
-  }
+.dropdown>img{
+width: 100px;
+height: 50px;
+}

@@ -1,6 +1,7 @@
 import React from "react";
 import "./styles/App.css";
-import "./styles/edititem.css"
+import "./styles/edititem.css";
+import "./styles/media.css"
 import editItem from "./components/edit.js";
 import deleteItem from "./components/delete.js";
 import Checked from "./components/checked";
@@ -115,7 +116,7 @@ function addItem(item){
 
 
       <div class="dropdown">
-        <span>view current list</span>
+        <img src="images/menu.png" alt="dropdown-menu"/>
           <div class="dropdown-content">
           <div>{dolist}</div>   
           </div>
