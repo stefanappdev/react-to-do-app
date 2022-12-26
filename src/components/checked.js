@@ -21,7 +21,7 @@ const Checked=()=>{
                 class="checkbox"
         />
 
-        <label htmlFor="checkbox">Completed</label>
+        <label htmlFor="checkbox"></label>
     </>)
 
 

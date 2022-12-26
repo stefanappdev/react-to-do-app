@@ -1,6 +1,7 @@
 import React from "react";
 import "./styles/App.css";
-import "./styles/edititem.css"
+import "./styles/edititem.css";
+import "./styles/media.css"
 import editItem from "./components/edit.js";
 import deleteItem from "./components/delete.js";
 import Checked from "./components/checked";
@@ -61,7 +62,7 @@ function addItem(item){
     
      const dolist=Todolist.map(item=> 
     <div class="itm-con" id={`ITEM${Todolist.indexOf(item)}`}>
-            <p class="item--info">{item}</p> 
+            <div class="item--info">{item}</div> 
 
         
           <button class="edit-btn" onClick={editItem}>edit</button> 
@@ -81,17 +82,14 @@ function addItem(item){
     <div className="form-container">
 
       <span id="App-title">
-      <strong>React Todolist app</strong>
+      <strong>React To-do-list app</strong>
       </span>
-        <form id="item--form" onSubmit={handleSubmit}>
 
-          <br/>
-          <br/>
-          <br/>
-          <br/>
-          <br/>
-          <br/>
-          <h2 id="form-header">Enter your tasks here!</h2>
+
+        <form id="todolist-form" onSubmit={handleSubmit}>
+
+        
+          <h2 id="form-header" class="form-item">Enter your tasks here!</h2>
 
             <input
                 name="todoitem"
@@ -99,21 +97,27 @@ function addItem(item){
                 onChange={handleChange}
                 placeholder="Enter new task here"
                 value={formdata.todoitem}
-                className="form--input"
+                className="form-input"
                
             />
               
-            <button class="form--submit" type="submit" >Add new task </button> 
+            
+            <button class="form-item" id="form-submit" type="submit" >Add new task </button> 
         </form>
-
-
-
         
       </div>
         
-      <h1>Current To-do-list</h1>
-       <div>{dolist}</div>
+      
 
+
+      <div class="dropdown">
+        <img src="images/menu.png" alt="dropdown-menu"/>
+          <div class="dropdown-content">
+          <div>{dolist}</div>   
+          </div>
+    </div>
+     
+        
     </>)
 
   }

@@ -1,0 +1,108 @@
+
+/*media query for portrait mode*/
+@media (orientation:portrait) and (max-width:700px){
+
+    .form-container{
+        width: 100%;
+    }
+    #todolist-form{
+        top:15%;
+        left:20%;
+        height:40vh;
+        width: 55%; 
+    }
+
+
+    #App-title{
+        top:4%;
+        left:22.5%;
+           
+    }
+
+
+    
+
+    #App-title>strong{
+        font-size: 20px;
+    }
+    
+   .dropdown{
+    top: 5%;
+    left: 0%;
+   }
+
+   .dropdown>img{
+       
+        width: 50px;
+        height: 30px;
+        
+        }
+
+#form-header{
+   
+    left:2%;
+}
+
+.form-item{
+    
+    margin-top: 20px;
+  }
+
+
+}
+
+
+
+
+/*media query for landscape mode*/
+
+@media (orientation:landscape) and (max-width:700px){
+
+    .form-container{
+        height: 100vh;
+        width: 120%;
+        
+        
+    }     
+    
+    #todolist-form{
+        top:18%;
+        left:25%;
+        height:70vh;
+        width: 80vw;  
+    }
+
+
+    #App-title{
+      
+        left:22%;
+           
+    }
+
+    
+
+    #App-title>strong{
+        font-size: 20px;
+    }
+    
+   .dropdown{
+    top: 5px;
+    left:0;
+   }
+
+   .dropdown>img{
+       
+        width: 50px;
+        height: 30px;
+        
+        }
+
+
+ .form-item{
+        
+         margin-top: 20px;
+          }
+
+
+
+}
