@@ -2,35 +2,32 @@
 /*media query for portrait mode*/
 @media (orientation:portrait) and (max-width:700px){
 
-   
+    .form-container{
+        width: 100%;
+    }
     #todolist-form{
-        top:100px;
-        left:10px;
-        height:50%;
-        width: 95%;  
+        top:15%;
+        left:20%;
+        height:40vh;
+        width: 55%; 
     }
 
 
     #App-title{
-      
-        left:20%;
+        top:4%;
+        left:22.5%;
            
     }
 
 
-
-    .form-input{
-        left: 100px;
-        
-    }
     
 
     #App-title>strong{
-        font-size: 25px;
+        font-size: 20px;
     }
     
    .dropdown{
-    top: 5px;
+    top: 5%;
     left: 0%;
    }
 
@@ -46,7 +43,10 @@
     left:2%;
 }
 
-
+.form-item{
+    
+    margin-top: 20px;
+  }
 
 
 }
@@ -56,7 +56,7 @@
 
 /*media query for landscape mode*/
 
-@media (orientation:landscape) and (min-height:200px){
+@media (orientation:landscape) and (max-width:700px){
 
     .form-container{
         height: 100vh;
@@ -66,29 +66,23 @@
     }     
     
     #todolist-form{
-        top:50px;
-        left:10%;
-        height:60vh;
+        top:18%;
+        left:25%;
+        height:70vh;
         width: 80vw;  
     }
 
 
     #App-title{
       
-        left:25%;
+        left:22%;
            
     }
 
-
-
-    .form-input{
-       
-        top: -50px;
-    }
     
 
     #App-title>strong{
-        font-size: 35px;
+        font-size: 20px;
     }
     
    .dropdown{
@@ -103,17 +97,11 @@
         
         }
 
-#form-header{
-    top:5%;
-    
-}
 
-#form-submit{
-
-    top:-5%;
-   
-}
-
+ .form-item{
+        
+         margin-top: 20px;
+          }
 
 
 

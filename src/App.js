@@ -100,8 +100,8 @@ function addItem(item){
                 className="form-input"
                
             />
-              <br/>
-              <br/>
+              
+            
             <button class="form-item" id="form-submit" type="submit" >Add new task </button> 
         </form>
         
