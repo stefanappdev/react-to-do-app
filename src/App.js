@@ -82,19 +82,14 @@ function addItem(item){
     <div className="form-container">
 
       <span id="App-title">
-      <strong>React Todolist app</strong>
+      <strong>React To-do-list app</strong>
       </span>
 
 
-        <form id="item--form" onSubmit={handleSubmit}>
+        <form id="todolist-form" onSubmit={handleSubmit}>
 
-          <br/>
-          <br/>
-          <br/>
-          <br/>
-          <br/>
-          <br/>
-          <h2 id="form-header">Enter your tasks here!</h2>
+        
+          <h2 id="form-header" class="form-item">Enter your tasks here!</h2>
 
             <input
                 name="todoitem"
@@ -102,12 +97,12 @@ function addItem(item){
                 onChange={handleChange}
                 placeholder="Enter new task here"
                 value={formdata.todoitem}
-                className="form--input"
+                className="form-input"
                
             />
               <br/>
               <br/>
-            <button class="form--submit" type="submit" >Add new task </button> 
+            <button class="form-item" id="form-submit" type="submit" >Add new task </button> 
         </form>
         
       </div>

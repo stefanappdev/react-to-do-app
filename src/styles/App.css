@@ -1,12 +1,12 @@
 .form-container{
 
-    height:100vh;
+    height:150vh;
     background-color: blueviolet;
 }
 
 #App-title{
     position:absolute;
-    left:38%;    
+    left:36%;    
 }
 
 
@@ -14,43 +14,50 @@
     font-size:50px;
 }
 
-#item--form{
+#todolist-form{
     position:absolute;
+    display: flex;
     left:500px;
     top:100px;
-    height:75vh;
+    height:50vh;
     width:70vh;
+    flex-direction: column;
     background-color: white;
     border:1px solid black;
     border-radius:5px;
-
+   align-items: center;
 }
 
-#form-header{
-    position: relative;
-    left:100px;
+
+.form-item{
+  position: relative;
+  
 }
 
-.form--input{
 
-    position:relative;
-    left:100px;
+
+.form-input{
+
+    
     border:1px solid black;
     border-radius:2px;
-    height:30px;
+    height:35px;
+    width: 250px;
+    top:400px;
 }
 
 
 
-.form--submit{
-    position:relative;
-    left:100px;
+#form-submit{
+    
     border:1px solid black;
     border-radius:10px;
     font-weight: bold;
     color:#000000;
     background-color:#009933;
     height:35px;
+    width: 120px;
+    top:10px;
 }
 
 .dropdown {
@@ -75,7 +82,7 @@
 
   .dropdown{
     float:left;
-    left: 50px;
+    left: 150px;
     top: 5px;
 }
 

@@ -1,8 +1,9 @@
 
 /*media query for portrait mode*/
-@media (orientation:portrait) and (max-width:500px){
+@media (orientation:portrait) and (max-width:700px){
 
-    #item--form{
+   
+    #todolist-form{
         top:100px;
         left:10px;
         height:50%;
@@ -12,25 +13,25 @@
 
     #App-title{
       
-        left: 15px;
+        left:20%;
            
     }
 
 
 
-    .form--input{
+    .form-input{
         left: 100px;
         
     }
     
 
     #App-title>strong{
-        font-size: 35px;
+        font-size: 25px;
     }
     
    .dropdown{
-    top: 50px;
-    left: 10px;
+    top: 5px;
+    left: 0%;
    }
 
    .dropdown>img{
@@ -42,7 +43,7 @@
 
 #form-header{
    
-    left:60px;
+    left:2%;
 }
 
 
@@ -55,29 +56,34 @@
 
 /*media query for landscape mode*/
 
-@media (orientation:landscape) and (max-height:600px){
+@media (orientation:landscape) and (min-height:200px){
 
-
+    .form-container{
+        height: 100vh;
+        width: 120%;
+        
+        
+    }     
     
-    #item--form{
-        top:100px;
-        left:10px;
-        height:50%;
-        width: 95%;  
+    #todolist-form{
+        top:50px;
+        left:10%;
+        height:60vh;
+        width: 80vw;  
     }
 
 
     #App-title{
       
-        left: 30%;
+        left:25%;
            
     }
 
 
 
-    .form--input{
-        left: 200px;
-        top: -100px;
+    .form-input{
+       
+        top: -50px;
     }
     
 
@@ -86,8 +92,8 @@
     }
     
    .dropdown{
-    top: 50px;
-    left: 10px;
+    top: 5px;
+    left:0;
    }
 
    .dropdown>img{
@@ -98,14 +104,14 @@
         }
 
 #form-header{
-    top: -100px;
-    left:200px;
+    top:5%;
+    
 }
 
-.form--submit{
+#form-submit{
 
-    top: -100px;
-    left:200px;
+    top:-5%;
+   
 }
 
 
