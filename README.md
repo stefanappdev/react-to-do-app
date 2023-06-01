@@ -3,4 +3,4 @@ Name: Stefan Mitchell
 
 visit this site to see live version of app:
 
-https: //clever-seahorse-8dce11.netlify.app
+https://clever-seahorse-8dce11.netlify.app
